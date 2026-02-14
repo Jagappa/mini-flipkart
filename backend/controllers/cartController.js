@@ -68,7 +68,7 @@ exports.getCart = async (req, res) => {
     const cart = await Cart.findOne({ user: req.user._id })
       .populate("items.product");
 
-    if (!cart) {
+     if (!cart || cart.items.length === 0) {
       return res.json({ message: "Cart is empty" });
     }
 
