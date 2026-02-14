@@ -1,12 +1,14 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Products from "./pages/Products";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <Routes>
-        <Route path="/" element={<h1>Mini Flipkart Home</h1>} />
+        <Route path="/" element={<Products />} />
       </Routes>
-    </BrowserRouter>
+    </Router>
   );
 }
 
